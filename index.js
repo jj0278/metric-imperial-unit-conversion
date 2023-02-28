@@ -19,6 +19,7 @@ let input = 0
 
 //button
 convertBtn.addEventListener("click", function(){
+    clear()
     input = inputEl.value
     render()
 })
@@ -32,6 +33,13 @@ function render(){
         volumeEl.textContent = `${input} liters = ${ltg(input)} gallons | ${input} gallons = ${gtl(input)} liters`
         massEl.textContent = `${input} kilos = ${ktp(input)} pounds | ${input} pounds = ${ptk(input)} kilos`
     }
+}
+
+function clear(){
+    tempEl.textContent = ""
+    lengthEl.textContent = ""
+    volumeEl.textContent = ""
+    massEl.textContent = ""
 }
 //Math functions
 function ctf(num){
